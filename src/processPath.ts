@@ -6,6 +6,7 @@ import {
   METHOD_POST,
   METHOD_PUT,
   METHOD_DELETE,
+  HTTP_STATUS_CODE_404,
 } from "./common/config";
 import {
   getUsers,
@@ -48,7 +49,7 @@ export const processPath = async (
       break;
 
     default:
-      res.writeHead(404, CONTENT_TYPE);
+      res.writeHead(HTTP_STATUS_CODE_404, CONTENT_TYPE);
       res.end(JSON.stringify({ message: "Sorry, but this route not found" }));
   }
 };

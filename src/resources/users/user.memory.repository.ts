@@ -30,7 +30,6 @@ const getUser = async (id: string): Promise<User|undefined> => {
   
   const removeUser = async (id: string): Promise<void> => {
     users = users.filter((u) => u.id !== id);
-    //removeUserFromTasks(id);
   };
   
   export { getAll, getUser, updateUser, saveUser, removeUser };
