@@ -1,29 +1,24 @@
-import { v4 as uuid } from 'uuid';
+import { v4 as uuid } from "uuid";
 
 class User {
   id: string;
 
-  name: string;
+  username: string;
 
-  login: string;
+  age: number;
 
-  password: string;
+  hobbies: Array<String>;
 
   constructor({
     id = uuid(),
-    name = 'USER',
-    login = 'user',
-    password = 'P@59w0rd',
+    username = "Unknow user",
+    age = 0,
+    hobbies = [{}],
   } = {}) {
     this.id = id;
-    this.name = name;
-    this.login = login;
-    this.password = password;
-  }
-
-  static toResponse(user: User): {id: string, name: string, login: string} {
-    const { id, name, login } = user;
-    return { id, name, login };
+    this.username = username;
+    this.age = age;
+    this.hobbies = hobbies.map((hobby) => new String(hobby));
   }
 }
 

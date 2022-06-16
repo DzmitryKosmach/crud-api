@@ -1,4 +1,4 @@
-import {Request, Response, Router}  from 'express';
+/* import {Request, Response, Router}  from 'express';
 
 import asyncHandler from 'express-async-handler';
 import User from './user.model';
@@ -14,4 +14,4 @@ router.route('/').get(
   })
 );
 
-export default router;
+export default router; */
