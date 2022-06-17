@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "ts-node src/server.ts",
+    "start:prod": "cross-env NODE_ENV=production && ts-node src/server.ts",
     "build": "tsc && node build/server.js",
-    "dev": "nodemon",
+    "start": "ts-node src/server.ts",
+    "start:dev": "cross-env NODE_ENV=development && nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dzmitry Kosmach",

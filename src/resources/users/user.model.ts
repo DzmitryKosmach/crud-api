@@ -11,7 +11,7 @@ class User {
 
   constructor({
     id = uuid(),
-    username = "Unknow user",
+    username = "Unknown user",
     age = 0,
     hobbies = [{}],
   } = {}) {
