@@ -4,10 +4,6 @@ import { server } from "../../app";
 import User from "../users/user.model";
 import { convertToString } from "../../common/utils";
 
-
-//https://medium.com/@natnael.awel/how-to-setup-testing-for-typescript-with-express-js-example-83d3efbb6fd4
-
-
 describe("First Scenario", () => {
     test("test GET, POST, PUT, DELETE methods", async () => {
         const resGet = await request(server).get("/api/users");
@@ -124,11 +120,11 @@ function compareUsersWithoutId(first: User, second: User): Boolean {
     delete firstCopy[propId];
     delete secondCopy[propId];
     return compareUsers(firstCopy, secondCopy);
-}
+};
 
 function compareUsers(first: User, second: User): Boolean {
     return JSON.stringify(first)===JSON.stringify(second);
-}
+};
 
 function modifyUuid(id: string): string {    
     const array = id.split("");
@@ -140,4 +136,4 @@ function modifyUuid(id: string): string {
     }
     const modifiedUuid = array.join("");    
     return modifiedUuid;
-}
+};

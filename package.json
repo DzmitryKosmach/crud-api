@@ -7,6 +7,7 @@
     "build": "tsc && node build/server.js",
     "start": "ts-node src/server.ts",
     "start:dev": "cross-env NODE_ENV=development && nodemon",
+    "start:multi": "cross-env NODE_ENV=production && ts-node src/serverMulti.ts",
     "test": "jest"
   },
   "author": "Dzmitry Kosmach",
