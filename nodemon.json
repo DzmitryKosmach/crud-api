@@ -1,5 +1,5 @@
 {
-    "ignore": ["node_modules"],
+    "ignore": ["node_modules", "__test__"],
     "watch": ["./src"],
     "exec": "npm run start",
     "ext": "ts"

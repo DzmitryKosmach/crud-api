@@ -1,6 +1,6 @@
 import User from './user.model';
 
-const usersStorage = {users: [
+const usersStorage = {users: new Array<User>} /* {users: [
   new User({
     username: 'Ivan',
     age: 24,
@@ -11,6 +11,6 @@ const usersStorage = {users: [
     age: 28,
     hobbies: ["soccer", "tennis"],
   }),
-]};
+]}; */
 
 export default usersStorage;

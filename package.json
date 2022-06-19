@@ -7,22 +7,26 @@
     "build": "tsc && node build/server.js",
     "start": "ts-node src/server.ts",
     "start:dev": "cross-env NODE_ENV=development && nodemon",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Dzmitry Kosmach",
   "license": "ISC",
   "dependencies": {
     "cross-env": "^7.0.3",
-    "dotenv": "^16.0.1",    
+    "dotenv": "^16.0.1",
     "uuid": "^8.3.2"
   },
-  "devDependencies": {    
+  "devDependencies": {
+    "@types/jest": "^28.1.2",
+    "@types/supertest": "^2.0.12",
     "@types/uuid": "^8.3.4",
     "eslint": "^8.17.0",
     "eslint-config-base": "^1.0.0",
     "eslint-config-prettier": "^8.5.0",
     "nodemon": "^2.0.16",
     "prettier": "^2.7.0",
+    "supertest": "^6.2.3",
+    "ts-jest": "^28.0.5",
     "ts-node": "^10.8.1"
   }
 }
